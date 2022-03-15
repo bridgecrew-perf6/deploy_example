@@ -1,41 +1,95 @@
+import { Routes, Route, Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 
 function App() {
   return (
     <div className="App">
+      <h1>Welcome to React Router!</h1>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="about" element={<About />} />
+      </Routes>
+    </div>
+  );
+}
+
+function Home() {
+  return (
+    <>
       <Helmet>
-        <title>Look good</title>
-        <meta name="description" content="About my testing site" />
+        <title>My Home</title>
+        <meta name="title" content="My Home" />
+        <meta name="description" content="About my testing website" />
 
-        <meta itemprop="name" content="Look good" />
-        <meta itemprop="description" content="About my testing site" />
-        <meta
-          itemprop="image"
-          content="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShtbUdknvmGqaAcEFvneCbBcSKAYDTatzbefpZ_SlRu2Oz3KLvvEopGNOHQkS-yx3T3Jk&usqp=CAU"
-        />
-
-        <meta
-          property="og:url"
-          content="https://kind-mayer-cf61b6.netlify.app"
-        />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Look good" />
-        <meta property="og:description" content="About my testing site" />
+        <meta property="og:url" content={window.location.href} />
+        <meta property="og:title" content="My Home" />
+        <meta property="og:description" content="About my testing website" />
         <meta
           property="og:image"
-          content="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShtbUdknvmGqaAcEFvneCbBcSKAYDTatzbefpZ_SlRu2Oz3KLvvEopGNOHQkS-yx3T3Jk&usqp=CAU"
+          content={`${window.location.href}/logo192.png`}
         />
 
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Look good" />
-        <meta name="twitter:description" content="About my testing site" />
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content={window.location.href} />
+        <meta property="twitter:title" content="My Home" />
         <meta
-          name="twitter:image"
-          content="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShtbUdknvmGqaAcEFvneCbBcSKAYDTatzbefpZ_SlRu2Oz3KLvvEopGNOHQkS-yx3T3Jk&usqp=CAU"
+          property="twitter:description"
+          content="About my testing website"
+        />
+        <meta
+          property="twitter:image"
+          content={`${window.location.href}/logo192.png`}
         />
       </Helmet>
-      App
-    </div>
+      <main>
+        <h2>Welcome to the homepage!</h2>
+        <p>You can do this, I believe in you.</p>
+      </main>
+      <nav>
+        <Link to="/about">About</Link>
+      </nav>
+    </>
+  );
+}
+
+function About() {
+  return (
+    <>
+      <Helmet>
+        <title>My About</title>
+        <meta name="title" content="My About" />
+        <meta name="description" content="About my testing website /about" />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={window.location.href} />
+        <meta property="og:title" content="My About" />
+        <meta property="og:description" content="About my testing website /about" />
+        <meta
+          property="og:image"
+          content={`${window.location.href}/logo192.png`}
+        />
+
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content={window.location.href} />
+        <meta property="twitter:title" content="My About" />
+        <meta
+          property="twitter:description"
+          content="About my testing website /about"
+        />
+        <meta
+          property="twitter:image"
+          content={`${window.location.href}/logo192.png`}
+        />
+      </Helmet>
+      <main>
+        <h2>Who are we?</h2>
+        <p>That feels like an existential question, don't you think?</p>
+      </main>
+      <nav>
+        <Link to="/">Home</Link>
+      </nav>
+    </>
   );
 }
 
