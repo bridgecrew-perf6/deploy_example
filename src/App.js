@@ -6,6 +6,8 @@ function App() {
       <Helmet>
         <title>My Title</title>
         <meta name="description" content="Helmet application" />
+        <meta property="og:title" content="Og Title" />
+        <meta property="og:description" content="Og description" />
       </Helmet>
       App
     </div>
