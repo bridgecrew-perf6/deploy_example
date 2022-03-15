@@ -1,3 +1,4 @@
+import React from 'react';
 import { Routes, Route, Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 
@@ -27,7 +28,7 @@ function Home() {
         <meta property="og:description" content="About my testing website" />
         <meta
           property="og:image"
-          content={`${window.location.href}/logo192.png`}
+          content={`${window.location.href}logo192.png`}
         />
 
         <meta property="twitter:card" content="summary_large_image" />
@@ -39,7 +40,7 @@ function Home() {
         />
         <meta
           property="twitter:image"
-          content={`${window.location.href}/logo192.png`}
+          content={`${window.location.href}logo192.png`}
         />
       </Helmet>
       <main>
@@ -67,7 +68,7 @@ function About() {
         <meta property="og:description" content="About my testing website /about" />
         <meta
           property="og:image"
-          content={`${window.location.href}/logo192.png`}
+          content={`${window.location.href}logo192.png`}
         />
 
         <meta property="twitter:card" content="summary_large_image" />
@@ -79,7 +80,7 @@ function About() {
         />
         <meta
           property="twitter:image"
-          content={`${window.location.href}/logo192.png`}
+          content={`${window.location.href}logo192.png`}
         />
       </Helmet>
       <main>
