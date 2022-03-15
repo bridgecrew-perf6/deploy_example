@@ -1,15 +1,37 @@
-import { Helmet } from 'react-helmet';
+import { SEO } from './SEO';
 
 function App() {
+  const title = 'My Title'
+  const description = 'About my testing site'
+
   return (
     <div className="App">
-      <Helmet>
-        <title>My Title</title>
-        <meta name="description" content="Helmet application" />
-        <link rel="canonical" href="https://kind-mayer-cf61b6.netlify.app/" />
-        <meta property="og:title" content="Og Title" />
-        <meta property="og:description" content="Og description" />
-      </Helmet>
+      <SEO
+        title={title}
+        description={description}
+        meta={[
+          {
+            property: 'og:type',
+            content: 'website',
+          },
+          {
+            property: "og:url",
+            content: window.location.href,
+          },
+          {
+            property: "og:title",
+            content: title,
+          },
+          {
+            property: "og:description",
+            content: description,
+          },
+          {
+            property: "og:image",
+            content: '/logo192.png',
+          },
+        ]}
+      />
       App
     </div>
   );
