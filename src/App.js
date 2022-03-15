@@ -1,10 +1,6 @@
 import { Helmet } from 'react-helmet';
-import { SEO } from './SEO';
 
 function App() {
-  const title = 'My Title';
-  const description = 'About my testing site';
-
   return (
     <div className="App">
       <Helmet>
